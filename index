@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unith.ai Demo</title>
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: linear-gradient(to bottom, #f0f6ff, #ffffff);
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      height: 100vh;
+    }
+    .left {
+      flex: 0 0 40%;
+      min-width: 320px;
+      box-sizing: border-box;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      height: 100vh; /* lock to one screen */
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      max-height: 720px; /* prevent pixelation on large screens */
+      border: none;
+      border-radius: 12px;
+    }
+    .right {
+      flex: 0 0 60%;
+      min-width: 320px;
+      box-sizing: border-box;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      overflow-y: auto;    /* allow scrolling */
+      max-height: 100vh;   /* never taller than screen */
+    }
+    h2 {
+      color: #0055ff;
+      margin-top: 2rem;
+    }
+    ul {
+      margin: 1rem 0;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .highlight {
+      color: #0055ff;
+      font-weight: 600;
+    }
+    .disclaimer {
+      margin-top: 2rem;
+      padding: 1rem;
+      border-left: 4px solid #ff9900;
+      background: #fff7e6;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      color: #444;
+    }
+    @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+  .left, .right {
+    padding: 20px;
+    height: auto;
+    min-height: unset; /* remove forced height */
+  }
+  .left {
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    aspect-ratio: 3/4; /* maintains portrait shape for Digital Human */
+    max-height: none;  /* don’t chop */
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <iframe 
+        src="https://stream.unith.ai/ScottMison-44/digitalscott-18561?api_key=cd0185c2167e467cb5850b17be2dc9ad" 
+        allow="microphone; camera; autoplay; encrypted-media;" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="right">
+      <!-- Logo instead of title -->
+      <img src="unith_logo_transparent.png" alt="Unith.ai Logo" style="max-width: 100px; height: auto; margin-bottom: 1rem; text-align: center;">
+
+      <p><span class="highlight">unith.ai</span> is a conversational AI platform that helps businesses create interactive and personalized digital experiences. The platform specializes in building <strong>AI-driven virtual humans</strong> that can engage in real-time conversations, provide customer support, and deliver information in a natural and scalable way.</p>
+      <p>By combining <strong>generative AI</strong>, <strong>speech recognition</strong>, and <strong>realistic avatars</strong>, Unith.ai enables organizations to transform how they connect with audiences—whether in marketing, customer service, or interactive training.</p>
+      <p><strong>Key highlights of Unith.ai include:</strong></p>
+      <ul>
+        <li>Seamless deployment of conversational AI across web and mobile platforms.</li>
+        <li>Realistic, human-like digital presenters for more engaging communication.</li>
+        <li>Integration with APIs and business systems for dynamic, personalized interactions.</li>
+        <li>Scalable solutions for industries such as education, entertainment, and corporate training.</li>
+      </ul>
+
+      <h3>How to Use This Demo</h3>
+      <ul>
+        <li>Click <strong>“Talk to Digi Scott”</strong> in the video panel to begin.</li>
+        <li>If you would like to speak with your voice, click the <strong>microphone button</strong> once the session has started.</li>
+        <li>You may also type your questions if you prefer text-based interaction.</li>
+      </ul>
+
+      <div class="disclaimer">
+        <strong>Note:</strong> This demonstration showcases our new <em>low-latency conversational system</em>.  
+        As an early release, you may occasionally experience minor performance inconsistencies.  
+        These are expected during testing and will be refined as we continue improving the platform.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
